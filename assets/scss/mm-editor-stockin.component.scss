@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+vaadin-grid {
+  --primary-color: grey;
+  line-height: 30px;
+}
+.file-list {
+  text-align: center;
+}
+.edit-layout {
+  display: flex;
+}
+.edit-layout paper-button {
+  display: flex;
+  margin: 10px;
+}
+.submit-button {
+  margin: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+}
+
+section paper-dialog-scrollable {
+  height: 100%;
+}
+
+

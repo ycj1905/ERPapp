@@ -1,0 +1,148 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.row:first-child {
+  padding: 0 12px;
+}
+
+.row:last-child {
+  padding: 0 12px 24px;
+}
+
+.col {
+  display: inline-block;
+  width: 49%;
+}
+
+.toolbar {
+  display: none;
+}
+
+.dates,
+.amounts {
+  display: flex;
+}
+
+.checkboxes {
+  padding: 14px 0 0 14px;
+}
+
+.checkboxes .caption {
+  font-weight: bold;
+  display: block;
+}
+
+.checkboxes paper-checkbox {
+  display: inline-block;
+  margin: 0 15px 0 5px;
+}
+
+paper-input,
+vaadin-combo-box,
+vaadin-date-picker {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+paper-input,
+vaadin-date-picker {
+  display: inline-block;
+  width: 49%;
+}
+
+vaadin-combo-box {
+  width: 49%;
+}
+
+.merchants {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+
+@media
+(max-width: 1500px)
+{
+  .col {
+    width: 100%;
+  }
+
+  .toolbar {
+    display: block;
+    background: #80cbc4;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: all 500ms;
+  }
+
+  .toolbar.open {
+    background: ghostwhite;
+    color: #37474f;
+  }
+
+  .toolbar iron-icon {
+    float: right;
+    color: #37474f;
+  }
+
+  .toolbar.open iron-icon {
+    color: #80cbc4;
+  }
+
+  .toolbar .badge {
+    float: right;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    background: #37474f;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 8px;
+    transition: all 500ms;
+  }
+
+  .toolbar.open .badge {
+    color: #fff;
+    background: #80cbc4;
+  }
+
+  .filters {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 500ms;
+  }
+
+  .filters.open {
+    max-height: 400px;
+  }
+
+  .dates,
+  .amounts {
+    flex-direction: row;
+  }
+
+  .dates vaadin-date-picker,
+  .amounts paper-input {
+    width: 50%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+}

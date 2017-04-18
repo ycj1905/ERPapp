@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+a {
+  //color: inherit;
+  color: black;
+  text-decoration: none;
+}
+.menu-drawer{
+  color: #0d47a1;
+}
+paper-item:hover {
+  background-color: darkgrey;
+}
+paper-toolbar {
+  color: white;
+}
+.outlet {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+
+
+
+

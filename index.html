@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/">
+    <title>AN-HE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="3D列印" />
+    <meta name="description" content="直噴機" />
+    <meta name="description" content="3D" />
+    <meta name="description" content="printer" />
+    <meta name="description" content="安和三維" />
+    <meta name="keywords" content="直噴機,dasink,安和三維" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.js"></script>
+
+
+    <!--Time Format tool-->
+    <script src="bower_components/moment/min/moment.min.js" charset="utf-8"></script>
+
+
+    <!--POLYMER IMPLEMENTATION-->
+    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script>
+        //Tell Polymer to use shadow DOM and before polymer imports
+        window.Polymer = window.Polymer || {};
+        window.Polymer.dom = 'shadow';
+    </script>
+
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+    <link rel="import" href="bower_components/iron-elements/iron-elements.html">
+    <link rel="import" href="bower_components/iron-icons/maps-icons.html">
+
+    <!--VAADIN POLYMER-->
+    <link rel="import" href="bower_components/vaadin-date-picker/vaadin-date-picker.html">
+    <link rel="import" href="bower_components/vaadin-combo-box/vaadin-combo-box.html">
+    <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
+
+    <link rel="stylesheet" href="src/css/app.css">
+</head>
+    <body>
+        <my-app>
+            <!--loading-->
+            <paper-spinner active style="position: relative; left: 50%; top: 40vh"></paper-spinner>
+        </my-app>
+
+        <script>
+            System.config({
+                packages: {
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+            document.addEventListener("WebComponentsReady", function () {
+                System.import('app/boot').then(null, console.error.bind(console));
+            });
+        </script>
+    </body>
+</html>
